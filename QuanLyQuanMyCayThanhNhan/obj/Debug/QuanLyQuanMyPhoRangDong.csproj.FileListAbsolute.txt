@@ -1,0 +1,12 @@
+E:\QuanLyQuanMyCay\QuanLyQuanMyCayThanhNhan\obj\Debug\QuanLyQuanMyPhoRangDong.csproj.AssemblyReference.cache
+E:\QuanLyQuanMyCay\QuanLyQuanMyCayThanhNhan\obj\Debug\QuanLyQuanMyPhoRangDong.fAccountProfile.resources
+E:\QuanLyQuanMyCay\QuanLyQuanMyCayThanhNhan\obj\Debug\QuanLyQuanMyPhoRangDong.fAdmin.resources
+E:\QuanLyQuanMyCay\QuanLyQuanMyCayThanhNhan\obj\Debug\QuanLyQuanMyPhoRangDong.fCategory.resources
+E:\QuanLyQuanMyCay\QuanLyQuanMyCayThanhNhan\obj\Debug\QuanLyQuanMyPhoRangDong.fLogin.resources
+E:\QuanLyQuanMyCay\QuanLyQuanMyCayThanhNhan\obj\Debug\QuanLyQuanMyPhoRangDong.fManagaer.resources
+E:\QuanLyQuanMyCay\QuanLyQuanMyCayThanhNhan\obj\Debug\QuanLyQuanMyPhoRangDong.GUI.PrintBill.resources
+E:\QuanLyQuanMyCay\QuanLyQuanMyCayThanhNhan\obj\Debug\QuanLyQuanMyCayThanhNhan.Properties.Resources.resources
+E:\QuanLyQuanMyCay\QuanLyQuanMyCayThanhNhan\obj\Debug\QuanLyQuanMyPhoRangDong.csproj.GenerateResource.cache
+E:\QuanLyQuanMyCay\QuanLyQuanMyCayThanhNhan\obj\Debug\QuanLyQuanMyPhoRangDong.csproj.CoreCompileInputs.cache
+E:\QuanLyQuanMyCay\QuanLyQuanMyCayThanhNhan\obj\Debug\QuanLyQuanMyCayThanhNhan.exe
+E:\QuanLyQuanMyCay\QuanLyQuanMyCayThanhNhan\obj\Debug\QuanLyQuanMyCayThanhNhan.pdb
