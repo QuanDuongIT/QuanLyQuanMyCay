@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace QuanLyQuanMyCayThanhNhan {
+namespace QuanLyQuanMyCayThanhNhan.P_Dataset {
     
     
     /// <summary>
@@ -1205,7 +1205,7 @@ namespace QuanLyQuanMyCayThanhNhan {
         }
     }
 }
-namespace QuanLyQuanMyCayThanhNhan.QuanLyQuanMyCayThanhNhanDataSet1TableAdapters {
+namespace QuanLyQuanMyCayThanhNhan.P_Dataset.QuanLyQuanMyCayThanhNhanDataSet1TableAdapters {
     
     
     /// <summary>
