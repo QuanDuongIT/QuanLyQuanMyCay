@@ -120,27 +120,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLyQuanMyCayThanhNhanDataSet.Designer.cs">
+    <Compile Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyQuanMyCayThanhNhanDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyQuanMyCayThanhNhanDataSet1.Designer.cs">
+    <Compile Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyQuanMyCayThanhNhanDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyQuanMyCayThanhNhanDataSet2.Designer.cs">
+    <Compile Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyQuanMyCayThanhNhanDataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyQuanMyCayThanhNhanDataSet3.Designer.cs">
+    <Compile Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyQuanMyCayThanhNhanDataSet3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyQuanMyCayThanhNhanDataSet4.Designer.cs">
+    <Compile Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet4.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyQuanMyCayThanhNhanDataSet4.xsd</DependentUpon>
@@ -176,7 +176,7 @@
     </Compile>
     <EmbeddedResource Include="ReportDataSources\DataReportThongKe.rdlc" />
     <EmbeddedResource Include="ReportDataSources\InHoaDon.rdlc" />
-    <None Include="packages.config" />
+    <None Include="Config\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -186,64 +186,64 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QuanLyQuanMyCayThanhNhanDataSet.xsc">
+    <None Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet.xsc">
       <DependentUpon>QuanLyQuanMyCayThanhNhanDataSet.xsd</DependentUpon>
     </None>
-    <None Include="QuanLyQuanMyCayThanhNhanDataSet.xsd">
+    <None Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>QuanLyQuanMyCayThanhNhanDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="QuanLyQuanMyCayThanhNhanDataSet.xss">
+    <None Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet.xss">
       <DependentUpon>QuanLyQuanMyCayThanhNhanDataSet.xsd</DependentUpon>
     </None>
-    <None Include="QuanLyQuanMyCayThanhNhanDataSet1.xsc">
+    <None Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet1.xsc">
       <DependentUpon>QuanLyQuanMyCayThanhNhanDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="QuanLyQuanMyCayThanhNhanDataSet1.xsd">
+    <None Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>QuanLyQuanMyCayThanhNhanDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="QuanLyQuanMyCayThanhNhanDataSet1.xss">
+    <None Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet1.xss">
       <DependentUpon>QuanLyQuanMyCayThanhNhanDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="QuanLyQuanMyCayThanhNhanDataSet2.xsc">
+    <None Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet2.xsc">
       <DependentUpon>QuanLyQuanMyCayThanhNhanDataSet2.xsd</DependentUpon>
     </None>
-    <None Include="QuanLyQuanMyCayThanhNhanDataSet2.xsd">
+    <None Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet2.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>QuanLyQuanMyCayThanhNhanDataSet2.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="QuanLyQuanMyCayThanhNhanDataSet2.xss">
+    <None Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet2.xss">
       <DependentUpon>QuanLyQuanMyCayThanhNhanDataSet2.xsd</DependentUpon>
     </None>
-    <None Include="QuanLyQuanMyCayThanhNhanDataSet3.xsc">
+    <None Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet3.xsc">
       <DependentUpon>QuanLyQuanMyCayThanhNhanDataSet3.xsd</DependentUpon>
     </None>
-    <None Include="QuanLyQuanMyCayThanhNhanDataSet3.xsd">
+    <None Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet3.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>QuanLyQuanMyCayThanhNhanDataSet3.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="QuanLyQuanMyCayThanhNhanDataSet3.xss">
+    <None Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet3.xss">
       <DependentUpon>QuanLyQuanMyCayThanhNhanDataSet3.xsd</DependentUpon>
     </None>
-    <None Include="QuanLyQuanMyCayThanhNhanDataSet4.xsc">
+    <None Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet4.xsc">
       <DependentUpon>QuanLyQuanMyCayThanhNhanDataSet4.xsd</DependentUpon>
     </None>
-    <None Include="QuanLyQuanMyCayThanhNhanDataSet4.xsd">
+    <None Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet4.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>QuanLyQuanMyCayThanhNhanDataSet4.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="QuanLyQuanMyCayThanhNhanDataSet4.xss">
+    <None Include="P_Dataset\QuanLyQuanMyCayThanhNhanDataSet4.xss">
       <DependentUpon>QuanLyQuanMyCayThanhNhanDataSet4.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Config\App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\hinh-nen-dang-nhap-cho-windows-10_100821444.jpg" />

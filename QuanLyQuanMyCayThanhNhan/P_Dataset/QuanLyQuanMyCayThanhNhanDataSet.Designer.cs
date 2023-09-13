@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace QuanLyQuanMyCayThanhNhan {
+namespace QuanLyQuanMyCayThanhNhan.P_Dataset {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace QuanLyQuanMyCayThanhNhan {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("QuanLyQuanMyCayThanhNhanDataSet4")]
+    [global::System.Xml.Serialization.XmlRootAttribute("QuanLyQuanMyCayThanhNhanDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class QuanLyQuanMyCayThanhNhanDataSet4 : global::System.Data.DataSet {
+    public partial class QuanLyQuanMyCayThanhNhanDataSet : global::System.Data.DataSet {
         
-        private USP_ReportBillDataTable tableUSP_ReportBill;
+        private USP_GetTableListDataTable tableUSP_GetTableList;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public QuanLyQuanMyCayThanhNhanDataSet4() {
+        public QuanLyQuanMyCayThanhNhanDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace QuanLyQuanMyCayThanhNhan {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected QuanLyQuanMyCayThanhNhanDataSet4(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected QuanLyQuanMyCayThanhNhanDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace QuanLyQuanMyCayThanhNhan {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["USP_ReportBill"] != null)) {
-                    base.Tables.Add(new USP_ReportBillDataTable(ds.Tables["USP_ReportBill"]));
+                if ((ds.Tables["USP_GetTableList"] != null)) {
+                    base.Tables.Add(new USP_GetTableListDataTable(ds.Tables["USP_GetTableList"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace QuanLyQuanMyCayThanhNhan {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public USP_ReportBillDataTable USP_ReportBill {
+        public USP_GetTableListDataTable USP_GetTableList {
             get {
-                return this.tableUSP_ReportBill;
+                return this.tableUSP_GetTableList;
             }
         }
         
@@ -127,7 +127,7 @@ namespace QuanLyQuanMyCayThanhNhan {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            QuanLyQuanMyCayThanhNhanDataSet4 cln = ((QuanLyQuanMyCayThanhNhanDataSet4)(base.Clone()));
+            QuanLyQuanMyCayThanhNhanDataSet cln = ((QuanLyQuanMyCayThanhNhanDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace QuanLyQuanMyCayThanhNhan {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["USP_ReportBill"] != null)) {
-                    base.Tables.Add(new USP_ReportBillDataTable(ds.Tables["USP_ReportBill"]));
+                if ((ds.Tables["USP_GetTableList"] != null)) {
+                    base.Tables.Add(new USP_GetTableListDataTable(ds.Tables["USP_GetTableList"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace QuanLyQuanMyCayThanhNhan {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableUSP_ReportBill = ((USP_ReportBillDataTable)(base.Tables["USP_ReportBill"]));
+            this.tableUSP_GetTableList = ((USP_GetTableListDataTable)(base.Tables["USP_GetTableList"]));
             if ((initTable == true)) {
-                if ((this.tableUSP_ReportBill != null)) {
-                    this.tableUSP_ReportBill.InitVars();
+                if ((this.tableUSP_GetTableList != null)) {
+                    this.tableUSP_GetTableList.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace QuanLyQuanMyCayThanhNhan {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "QuanLyQuanMyCayThanhNhanDataSet4";
+            this.DataSetName = "QuanLyQuanMyCayThanhNhanDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/QuanLyQuanMyCayThanhNhanDataSet4.xsd";
+            this.Namespace = "http://tempuri.org/QuanLyQuanMyCayThanhNhanDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableUSP_ReportBill = new USP_ReportBillDataTable();
-            base.Tables.Add(this.tableUSP_ReportBill);
+            this.tableUSP_GetTableList = new USP_GetTableListDataTable();
+            base.Tables.Add(this.tableUSP_GetTableList);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeUSP_ReportBill() {
+        private bool ShouldSerializeUSP_GetTableList() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace QuanLyQuanMyCayThanhNhan {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            QuanLyQuanMyCayThanhNhanDataSet4 ds = new QuanLyQuanMyCayThanhNhanDataSet4();
+            QuanLyQuanMyCayThanhNhanDataSet ds = new QuanLyQuanMyCayThanhNhanDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,29 +270,25 @@ namespace QuanLyQuanMyCayThanhNhan {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void USP_ReportBillRowChangeEventHandler(object sender, USP_ReportBillRowChangeEvent e);
+        public delegate void USP_GetTableListRowChangeEventHandler(object sender, USP_GetTableListRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class USP_ReportBillDataTable : global::System.Data.TypedTableBase<USP_ReportBillRow> {
+        public partial class USP_GetTableListDataTable : global::System.Data.TypedTableBase<USP_GetTableListRow> {
+            
+            private global::System.Data.DataColumn columnid;
             
             private global::System.Data.DataColumn columnname;
             
-            private global::System.Data.DataColumn columncount;
-            
-            private global::System.Data.DataColumn columnprice;
-            
-            private global::System.Data.DataColumn columndiscount;
-            
-            private global::System.Data.DataColumn columntotalPrice;
+            private global::System.Data.DataColumn columnstatus;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public USP_ReportBillDataTable() {
-                this.TableName = "USP_ReportBill";
+            public USP_GetTableListDataTable() {
+                this.TableName = "USP_GetTableList";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +296,7 @@ namespace QuanLyQuanMyCayThanhNhan {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal USP_ReportBillDataTable(global::System.Data.DataTable table) {
+            internal USP_GetTableListDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,9 +313,17 @@ namespace QuanLyQuanMyCayThanhNhan {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected USP_ReportBillDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected USP_GetTableListDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -332,33 +336,9 @@ namespace QuanLyQuanMyCayThanhNhan {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn countColumn {
+            public global::System.Data.DataColumn statusColumn {
                 get {
-                    return this.columncount;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn priceColumn {
-                get {
-                    return this.columnprice;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn discountColumn {
-                get {
-                    return this.columndiscount;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn totalPriceColumn {
-                get {
-                    return this.columntotalPrice;
+                    return this.columnstatus;
                 }
             }
             
@@ -373,49 +353,54 @@ namespace QuanLyQuanMyCayThanhNhan {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public USP_ReportBillRow this[int index] {
+            public USP_GetTableListRow this[int index] {
                 get {
-                    return ((USP_ReportBillRow)(this.Rows[index]));
+                    return ((USP_GetTableListRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event USP_ReportBillRowChangeEventHandler USP_ReportBillRowChanging;
+            public event USP_GetTableListRowChangeEventHandler USP_GetTableListRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event USP_ReportBillRowChangeEventHandler USP_ReportBillRowChanged;
+            public event USP_GetTableListRowChangeEventHandler USP_GetTableListRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event USP_ReportBillRowChangeEventHandler USP_ReportBillRowDeleting;
+            public event USP_GetTableListRowChangeEventHandler USP_GetTableListRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event USP_ReportBillRowChangeEventHandler USP_ReportBillRowDeleted;
+            public event USP_GetTableListRowChangeEventHandler USP_GetTableListRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddUSP_ReportBillRow(USP_ReportBillRow row) {
+            public void AddUSP_GetTableListRow(USP_GetTableListRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public USP_ReportBillRow AddUSP_ReportBillRow(string name, int count, double price, int discount, double totalPrice) {
-                USP_ReportBillRow rowUSP_ReportBillRow = ((USP_ReportBillRow)(this.NewRow()));
+            public USP_GetTableListRow AddUSP_GetTableListRow(string name, string status) {
+                USP_GetTableListRow rowUSP_GetTableListRow = ((USP_GetTableListRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        null,
                         name,
-                        count,
-                        price,
-                        discount,
-                        totalPrice};
-                rowUSP_ReportBillRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowUSP_ReportBillRow);
-                return rowUSP_ReportBillRow;
+                        status};
+                rowUSP_GetTableListRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowUSP_GetTableListRow);
+                return rowUSP_GetTableListRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public USP_GetTableListRow FindByid(int id) {
+                return ((USP_GetTableListRow)(this.Rows.Find(new object[] {
+                            id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                USP_ReportBillDataTable cln = ((USP_ReportBillDataTable)(base.Clone()));
+                USP_GetTableListDataTable cln = ((USP_GetTableListDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -423,64 +408,62 @@ namespace QuanLyQuanMyCayThanhNhan {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new USP_ReportBillDataTable();
+                return new USP_GetTableListDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnid = base.Columns["id"];
                 this.columnname = base.Columns["name"];
-                this.columncount = base.Columns["count"];
-                this.columnprice = base.Columns["price"];
-                this.columndiscount = base.Columns["discount"];
-                this.columntotalPrice = base.Columns["totalPrice"];
+                this.columnstatus = base.Columns["status"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
                 this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnname);
-                this.columncount = new global::System.Data.DataColumn("count", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncount);
-                this.columnprice = new global::System.Data.DataColumn("price", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprice);
-                this.columndiscount = new global::System.Data.DataColumn("discount", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndiscount);
-                this.columntotalPrice = new global::System.Data.DataColumn("totalPrice", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntotalPrice);
+                this.columnstatus = new global::System.Data.DataColumn("status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstatus);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid}, true));
+                this.columnid.AutoIncrement = true;
+                this.columnid.AllowDBNull = false;
+                this.columnid.ReadOnly = true;
+                this.columnid.Unique = true;
                 this.columnname.AllowDBNull = false;
                 this.columnname.MaxLength = 100;
-                this.columncount.AllowDBNull = false;
-                this.columnprice.AllowDBNull = false;
-                this.columndiscount.AllowDBNull = false;
-                this.columntotalPrice.ReadOnly = true;
+                this.columnstatus.AllowDBNull = false;
+                this.columnstatus.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public USP_ReportBillRow NewUSP_ReportBillRow() {
-                return ((USP_ReportBillRow)(this.NewRow()));
+            public USP_GetTableListRow NewUSP_GetTableListRow() {
+                return ((USP_GetTableListRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new USP_ReportBillRow(builder);
+                return new USP_GetTableListRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(USP_ReportBillRow);
+                return typeof(USP_GetTableListRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.USP_ReportBillRowChanged != null)) {
-                    this.USP_ReportBillRowChanged(this, new USP_ReportBillRowChangeEvent(((USP_ReportBillRow)(e.Row)), e.Action));
+                if ((this.USP_GetTableListRowChanged != null)) {
+                    this.USP_GetTableListRowChanged(this, new USP_GetTableListRowChangeEvent(((USP_GetTableListRow)(e.Row)), e.Action));
                 }
             }
             
@@ -488,8 +471,8 @@ namespace QuanLyQuanMyCayThanhNhan {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.USP_ReportBillRowChanging != null)) {
-                    this.USP_ReportBillRowChanging(this, new USP_ReportBillRowChangeEvent(((USP_ReportBillRow)(e.Row)), e.Action));
+                if ((this.USP_GetTableListRowChanging != null)) {
+                    this.USP_GetTableListRowChanging(this, new USP_GetTableListRowChangeEvent(((USP_GetTableListRow)(e.Row)), e.Action));
                 }
             }
             
@@ -497,8 +480,8 @@ namespace QuanLyQuanMyCayThanhNhan {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.USP_ReportBillRowDeleted != null)) {
-                    this.USP_ReportBillRowDeleted(this, new USP_ReportBillRowChangeEvent(((USP_ReportBillRow)(e.Row)), e.Action));
+                if ((this.USP_GetTableListRowDeleted != null)) {
+                    this.USP_GetTableListRowDeleted(this, new USP_GetTableListRowChangeEvent(((USP_GetTableListRow)(e.Row)), e.Action));
                 }
             }
             
@@ -506,14 +489,14 @@ namespace QuanLyQuanMyCayThanhNhan {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.USP_ReportBillRowDeleting != null)) {
-                    this.USP_ReportBillRowDeleting(this, new USP_ReportBillRowChangeEvent(((USP_ReportBillRow)(e.Row)), e.Action));
+                if ((this.USP_GetTableListRowDeleting != null)) {
+                    this.USP_GetTableListRowDeleting(this, new USP_GetTableListRowChangeEvent(((USP_GetTableListRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveUSP_ReportBillRow(USP_ReportBillRow row) {
+            public void RemoveUSP_GetTableListRow(USP_GetTableListRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -522,7 +505,7 @@ namespace QuanLyQuanMyCayThanhNhan {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                QuanLyQuanMyCayThanhNhanDataSet4 ds = new QuanLyQuanMyCayThanhNhanDataSet4();
+                QuanLyQuanMyCayThanhNhanDataSet ds = new QuanLyQuanMyCayThanhNhanDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -540,7 +523,7 @@ namespace QuanLyQuanMyCayThanhNhan {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "USP_ReportBillDataTable";
+                attribute2.FixedValue = "USP_GetTableListDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -584,87 +567,48 @@ namespace QuanLyQuanMyCayThanhNhan {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class USP_ReportBillRow : global::System.Data.DataRow {
+        public partial class USP_GetTableListRow : global::System.Data.DataRow {
             
-            private USP_ReportBillDataTable tableUSP_ReportBill;
+            private USP_GetTableListDataTable tableUSP_GetTableList;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal USP_ReportBillRow(global::System.Data.DataRowBuilder rb) : 
+            internal USP_GetTableListRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableUSP_ReportBill = ((USP_ReportBillDataTable)(this.Table));
+                this.tableUSP_GetTableList = ((USP_GetTableListDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id {
+                get {
+                    return ((int)(this[this.tableUSP_GetTableList.idColumn]));
+                }
+                set {
+                    this[this.tableUSP_GetTableList.idColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string name {
                 get {
-                    return ((string)(this[this.tableUSP_ReportBill.nameColumn]));
+                    return ((string)(this[this.tableUSP_GetTableList.nameColumn]));
                 }
                 set {
-                    this[this.tableUSP_ReportBill.nameColumn] = value;
+                    this[this.tableUSP_GetTableList.nameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int count {
+            public string status {
                 get {
-                    return ((int)(this[this.tableUSP_ReportBill.countColumn]));
+                    return ((string)(this[this.tableUSP_GetTableList.statusColumn]));
                 }
                 set {
-                    this[this.tableUSP_ReportBill.countColumn] = value;
+                    this[this.tableUSP_GetTableList.statusColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double price {
-                get {
-                    return ((double)(this[this.tableUSP_ReportBill.priceColumn]));
-                }
-                set {
-                    this[this.tableUSP_ReportBill.priceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int discount {
-                get {
-                    return ((int)(this[this.tableUSP_ReportBill.discountColumn]));
-                }
-                set {
-                    this[this.tableUSP_ReportBill.discountColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double totalPrice {
-                get {
-                    try {
-                        return ((double)(this[this.tableUSP_ReportBill.totalPriceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'totalPrice\' in table \'USP_ReportBill\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUSP_ReportBill.totalPriceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IstotalPriceNull() {
-                return this.IsNull(this.tableUSP_ReportBill.totalPriceColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SettotalPriceNull() {
-                this[this.tableUSP_ReportBill.totalPriceColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -672,22 +616,22 @@ namespace QuanLyQuanMyCayThanhNhan {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class USP_ReportBillRowChangeEvent : global::System.EventArgs {
+        public class USP_GetTableListRowChangeEvent : global::System.EventArgs {
             
-            private USP_ReportBillRow eventRow;
+            private USP_GetTableListRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public USP_ReportBillRowChangeEvent(USP_ReportBillRow row, global::System.Data.DataRowAction action) {
+            public USP_GetTableListRowChangeEvent(USP_GetTableListRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public USP_ReportBillRow Row {
+            public USP_GetTableListRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -703,7 +647,7 @@ namespace QuanLyQuanMyCayThanhNhan {
         }
     }
 }
-namespace QuanLyQuanMyCayThanhNhan.QuanLyQuanMyCayThanhNhanDataSet4TableAdapters {
+namespace QuanLyQuanMyCayThanhNhan.P_Dataset.QuanLyQuanMyCayThanhNhanDataSetTableAdapters {
     
     
     /// <summary>
@@ -715,7 +659,7 @@ namespace QuanLyQuanMyCayThanhNhan.QuanLyQuanMyCayThanhNhanDataSet4TableAdapters
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class USP_ReportBillTableAdapter : global::System.ComponentModel.Component {
+    public partial class USP_GetTableListTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -729,7 +673,7 @@ namespace QuanLyQuanMyCayThanhNhan.QuanLyQuanMyCayThanhNhanDataSet4TableAdapters
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public USP_ReportBillTableAdapter() {
+        public USP_GetTableListTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -826,12 +770,10 @@ namespace QuanLyQuanMyCayThanhNhan.QuanLyQuanMyCayThanhNhanDataSet4TableAdapters
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "USP_ReportBill";
+            tableMapping.DataSetTable = "USP_GetTableList";
+            tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("name", "name");
-            tableMapping.ColumnMappings.Add("count", "count");
-            tableMapping.ColumnMappings.Add("price", "price");
-            tableMapping.ColumnMappings.Add("discount", "discount");
-            tableMapping.ColumnMappings.Add("totalPrice", "totalPrice");
+            tableMapping.ColumnMappings.Add("status", "status");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -848,24 +790,17 @@ namespace QuanLyQuanMyCayThanhNhan.QuanLyQuanMyCayThanhNhanDataSet4TableAdapters
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.USP_ReportBill";
+            this._commandCollection[0].CommandText = "dbo.USP_GetTableList";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idTable", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QuanLyQuanMyCayThanhNhanDataSet4.USP_ReportBillDataTable dataTable, global::System.Nullable<int> idTable) {
+        public virtual int Fill(QuanLyQuanMyCayThanhNhanDataSet.USP_GetTableListDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((idTable.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idTable.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -877,15 +812,9 @@ namespace QuanLyQuanMyCayThanhNhan.QuanLyQuanMyCayThanhNhanDataSet4TableAdapters
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QuanLyQuanMyCayThanhNhanDataSet4.USP_ReportBillDataTable GetData(global::System.Nullable<int> idTable) {
+        public virtual QuanLyQuanMyCayThanhNhanDataSet.USP_GetTableListDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((idTable.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idTable.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            QuanLyQuanMyCayThanhNhanDataSet4.USP_ReportBillDataTable dataTable = new QuanLyQuanMyCayThanhNhanDataSet4.USP_ReportBillDataTable();
+            QuanLyQuanMyCayThanhNhanDataSet.USP_GetTableListDataTable dataTable = new QuanLyQuanMyCayThanhNhanDataSet.USP_GetTableListDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -959,7 +888,7 @@ namespace QuanLyQuanMyCayThanhNhan.QuanLyQuanMyCayThanhNhanDataSet4TableAdapters
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(QuanLyQuanMyCayThanhNhanDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(QuanLyQuanMyCayThanhNhanDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -969,7 +898,7 @@ namespace QuanLyQuanMyCayThanhNhan.QuanLyQuanMyCayThanhNhanDataSet4TableAdapters
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(QuanLyQuanMyCayThanhNhanDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(QuanLyQuanMyCayThanhNhanDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -979,7 +908,7 @@ namespace QuanLyQuanMyCayThanhNhan.QuanLyQuanMyCayThanhNhanDataSet4TableAdapters
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(QuanLyQuanMyCayThanhNhanDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(QuanLyQuanMyCayThanhNhanDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1013,7 +942,7 @@ namespace QuanLyQuanMyCayThanhNhan.QuanLyQuanMyCayThanhNhanDataSet4TableAdapters
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(QuanLyQuanMyCayThanhNhanDataSet4 dataSet) {
+        public virtual int UpdateAll(QuanLyQuanMyCayThanhNhanDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

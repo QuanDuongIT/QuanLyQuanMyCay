@@ -32,12 +32,12 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.uSPReportBillBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.quanLyQuanMyCayThanhNhanDataSet4BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quanLyQuanMyCayThanhNhanDataSet4 = new QuanLyQuanMyCayThanhNhan.QuanLyQuanMyCayThanhNhanDataSet4();
+            this.quanLyQuanMyCayThanhNhanDataSet4 = new QuanLyQuanMyCayThanhNhan.P_Dataset.QuanLyQuanMyCayThanhNhanDataSet4();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.uSPReportBillBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uSP_ReportBillTableAdapter = new QuanLyQuanMyCayThanhNhan.QuanLyQuanMyCayThanhNhanDataSet4TableAdapters.USP_ReportBillTableAdapter();
+            this.uSP_ReportBillTableAdapter = new QuanLyQuanMyCayThanhNhan.P_Dataset.QuanLyQuanMyCayThanhNhanDataSet4TableAdapters.USP_ReportBillTableAdapter();
             this.uSPReportBillBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.quanLyQuanMyCayThanhNhanDataSet = new QuanLyQuanMyCayThanhNhan.QuanLyQuanMyCayThanhNhanDataSet();
+            this.quanLyQuanMyCayThanhNhanDataSet = new QuanLyQuanMyCayThanhNhan.P_Dataset.QuanLyQuanMyCayThanhNhanDataSet();
             this.quanLyQuanMyCayThanhNhanDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.USP_ReportBillBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnCheckOut = new System.Windows.Forms.Button();
@@ -144,12 +144,12 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource uSPReportBillBindingSource;
-        private QuanLyQuanMyCayThanhNhanDataSet4 quanLyQuanMyCayThanhNhanDataSet4;
-        private QuanLyQuanMyCayThanhNhanDataSet4TableAdapters.USP_ReportBillTableAdapter uSP_ReportBillTableAdapter;
+        private P_Dataset.QuanLyQuanMyCayThanhNhanDataSet4 quanLyQuanMyCayThanhNhanDataSet4;
+        private P_Dataset.QuanLyQuanMyCayThanhNhanDataSet4TableAdapters.USP_ReportBillTableAdapter uSP_ReportBillTableAdapter;
         private System.Windows.Forms.BindingSource uSPReportBillBindingSource1;
         private System.Windows.Forms.BindingSource quanLyQuanMyCayThanhNhanDataSet4BindingSource;
         private System.Windows.Forms.BindingSource quanLyQuanMyCayThanhNhanDataSetBindingSource;
-        private QuanLyQuanMyCayThanhNhanDataSet quanLyQuanMyCayThanhNhanDataSet;
+        private P_Dataset.QuanLyQuanMyCayThanhNhanDataSet quanLyQuanMyCayThanhNhanDataSet;
         private System.Windows.Forms.BindingSource USP_ReportBillBindingSource;
         private System.Windows.Forms.BindingSource uSPReportBillBindingSource2;
         private System.Windows.Forms.Button btnCheckOut;
