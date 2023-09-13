@@ -1,2 +1,0 @@
-﻿--StructureTable
---Cấu trúc bảng
