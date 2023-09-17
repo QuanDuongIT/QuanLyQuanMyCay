@@ -34,10 +34,6 @@ namespace QuanLyQuanMyCayThanhNhan
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbpFood = new System.Windows.Forms.TabPage();
             this.dtgvFood = new System.Windows.Forms.DataGridView();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.nmFoodPrice = new System.Windows.Forms.NumericUpDown();
@@ -99,6 +95,14 @@ namespace QuanLyQuanMyCayThanhNhan
             this.btnEditFoodCategory = new System.Windows.Forms.Button();
             this.btnDeleteFoodCategory = new System.Windows.Forms.Button();
             this.btnAddFoodCategory = new System.Windows.Forms.Button();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.nmQuantity = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tbpFood.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).BeginInit();
@@ -122,6 +126,8 @@ namespace QuanLyQuanMyCayThanhNhan
             this.panel1.SuspendLayout();
             this.panel32.SuspendLayout();
             this.panel22.SuspendLayout();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -156,7 +162,8 @@ namespace QuanLyQuanMyCayThanhNhan
             this.Column6,
             this.Column8,
             this.Column9,
-            this.Column7});
+            this.Column7,
+            this.Column14});
             this.dtgvFood.Location = new System.Drawing.Point(9, 5);
             this.dtgvFood.Name = "dtgvFood";
             this.dtgvFood.ReadOnly = true;
@@ -165,39 +172,10 @@ namespace QuanLyQuanMyCayThanhNhan
             this.dtgvFood.Size = new System.Drawing.Size(601, 584);
             this.dtgvFood.TabIndex = 1;
             // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "Name";
-            this.Column6.HeaderText = "Tên thức ăn";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 380;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "ID";
-            this.Column8.HeaderText = "ID";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "CategoryID";
-            this.Column9.HeaderText = "CategoryID";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "Price";
-            this.Column7.HeaderText = "Giá";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 200;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.panel13);
             this.panel2.Controls.Add(this.panel12);
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel10);
@@ -429,7 +407,6 @@ namespace QuanLyQuanMyCayThanhNhan
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(329, 24);
             this.cbGender.TabIndex = 6;
-        
             this.cbGender.Click += new System.EventHandler(this.cbGender_Click);
             // 
             // panel6
@@ -459,7 +436,6 @@ namespace QuanLyQuanMyCayThanhNhan
             this.txbClientID.ReadOnly = true;
             this.txbClientID.Size = new System.Drawing.Size(329, 22);
             this.txbClientID.TabIndex = 1;
-            //this.txbClientID.Click += new System.EventHandler(this.txbClientID_Click);
             // 
             // panel5
             // 
@@ -787,6 +763,75 @@ namespace QuanLyQuanMyCayThanhNhan
             this.btnAddFoodCategory.UseVisualStyleBackColor = true;
             this.btnAddFoodCategory.Click += new System.EventHandler(this.btnAddFoodCategory_Click);
             // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Name";
+            this.Column6.HeaderText = "Tên thức ăn";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 380;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "ID";
+            this.Column8.HeaderText = "ID";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "CategoryID";
+            this.Column9.HeaderText = "CategoryID";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "Price";
+            this.Column7.HeaderText = "Giá";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 200;
+            // 
+            // Column14
+            // 
+            this.Column14.DataPropertyName = "Quantity1";
+            this.Column14.HeaderText = "Số lượng";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.nmQuantity);
+            this.panel13.Controls.Add(this.label11);
+            this.panel13.Location = new System.Drawing.Point(36, 348);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(384, 35);
+            this.panel13.TabIndex = 10;
+            // 
+            // nmQuantity
+            // 
+            this.nmQuantity.Location = new System.Drawing.Point(93, 9);
+            this.nmQuantity.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.nmQuantity.Name = "nmQuantity";
+            this.nmQuantity.Size = new System.Drawing.Size(277, 22);
+            this.nmQuantity.TabIndex = 3;
+            this.nmQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(3, 10);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(63, 15);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Số lượng :";
+            // 
             // fCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -832,6 +877,9 @@ namespace QuanLyQuanMyCayThanhNhan
             this.panel32.ResumeLayout(false);
             this.panel32.PerformLayout();
             this.panel22.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmQuantity)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -892,10 +940,6 @@ namespace QuanLyQuanMyCayThanhNhan
         private TextBox txbClientID;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column8;
-        private DataGridViewTextBoxColumn Column9;
-        private DataGridViewTextBoxColumn Column7;
         private Panel panel8;
         private Label label10;
         private ComboBox cbGender;
@@ -906,5 +950,13 @@ namespace QuanLyQuanMyCayThanhNhan
         private DataGridViewTextBoxColumn Column10;
         private DataGridViewTextBoxColumn Column11;
         private DataGridViewTextBoxColumn Column12;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column8;
+        private DataGridViewTextBoxColumn Column9;
+        private DataGridViewTextBoxColumn Column7;
+        private DataGridViewTextBoxColumn Column14;
+        private Panel panel13;
+        private NumericUpDown nmQuantity;
+        private Label label11;
     }
 }

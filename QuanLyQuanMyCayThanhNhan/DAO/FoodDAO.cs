@@ -41,7 +41,7 @@ namespace QuanLyQuanMyCayThanhNhan.DAO
         {
             List<Food> list = new List<Food>();
 
-            string query = "select f.id,f.name,f.idCategory,f.price from Food as f,FoodCategory where f.idCategory=FoodCategory.id and FoodCategory.name =N'"+name+"'";
+            string query = "exec GetFoodByCategoryName N'"+name+"'";
 
             DataTable data = DataProvider.Instance.ExexuteQuery(query);
             foreach (DataRow item in data.Rows)
@@ -87,18 +87,18 @@ namespace QuanLyQuanMyCayThanhNhan.DAO
 
        
 
-        public bool InsertFood(string name, int idCategory, float price)
+        public bool InsertFood(string name, int idCategory, float price,int quantity)
         {
           
-            string query = string.Format("exec USP_InsertFood N'{0}' , {1} , {2} ",name, idCategory, price);
+            string query = string.Format("exec USP_InsertFood N'{0}' , {1} , {2} , {3}",name, idCategory, price,quantity);
           
             int result = DataProvider.Instance.ExexuteNonQuery(query);
             return result>0;
         }
 
-        public bool UpdateFood(int id, string newname, int newidCategory, float newprice)
+        public bool UpdateFood(int id, string newname, int newidCategory, float newprice,int quantity)
         {
-            string query = string.Format("exec USP_EditFood N'{0}',{1},{2},{3}",  newname, newidCategory, newprice, id);
+            string query = string.Format("exec USP_EditFood N'{0}',{1},{2},{3},{4}",  newname, newidCategory, newprice, id, quantity);
             int result = DataProvider.Instance.ExexuteNonQuery(query);
             return result>0;
 

@@ -73,7 +73,7 @@ namespace QuanLyQuanMyCayThanhNhan
             txbFoodName.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "Name", true, DataSourceUpdateMode.Never));
             //    cbCategory.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "CategoryId", true, DataSourceUpdateMode.Never));
             nmFoodPrice.DataBindings.Add(new Binding("Value", dtgvFood.DataSource, "price", true, DataSourceUpdateMode.Never));
-           
+           nmQuantity.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "Quantity1", true, DataSourceUpdateMode.Never));
         }
 
         void LoadCategoryIntoCombobox(ComboBox comboBox)
@@ -170,8 +170,8 @@ namespace QuanLyQuanMyCayThanhNhan
             string name = txbFoodName.Text;
             int idCategory = (cbCategory.SelectedItem as Category).ID;
             float price = (float)nmFoodPrice.Value;
-   
-            if (FoodDAO.Instance.InsertFood(name, idCategory, price))
+            int quantity = (int)nmQuantity.Value;
+            if (FoodDAO.Instance.InsertFood(name, idCategory, price, quantity ))
             {
                 MessageBox.Show("Thêm thành công");
 
@@ -189,7 +189,8 @@ namespace QuanLyQuanMyCayThanhNhan
             string name = txbFoodName.Text;
             int idCategory = (cbCategory.SelectedItem as Category).ID;
             float price = (float)nmFoodPrice.Value;
-            if (FoodDAO.Instance.UpdateFood(id, name, idCategory, price))
+            int quantity = (int)nmQuantity.Value;
+            if (FoodDAO.Instance.UpdateFood(id, name, idCategory, price, quantity))
             {
                 MessageBox.Show("Sửa thành công");
                 
