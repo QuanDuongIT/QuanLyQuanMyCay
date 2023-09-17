@@ -45,11 +45,13 @@ namespace QuanLyQuanMyCayThanhNhan
             LoadFood();
             LoadCategoryIntoCombobox(cbCategory);
 
-            dtgvClient.DataSource=ClientList;
-            dtgvClient.Columns["ID"].Visible= false;
+            dtgvClient.DataSource = ClientList;
             AddClientBinding();
             LoadClient();
-
+            dtgvClient.Columns["Column3"].Visible = false;
+            dtgvClient.Columns["Column13"].Visible = false;
+            dtgvClient.Columns["Column4"].Visible = false;
+            panel6.Size = new System.Drawing.Size(0, 0);
         }
 
         void AddFoodCategoryBinding()
@@ -90,12 +92,12 @@ namespace QuanLyQuanMyCayThanhNhan
 
         void AddClientBinding()
         {
-            txbClientID.DataBindings.Add(new Binding("Text", dtgvClient.DataSource, "ID", true, DataSourceUpdateMode.Never));
-            txbClientName.DataBindings.Add(new Binding("Text", dtgvClient.DataSource, "Name", true, DataSourceUpdateMode.Never));
+            txbClientID.DataBindings.Add(new Binding("Text", dtgvClient.DataSource, "UserName", true, DataSourceUpdateMode.Never));
+            txbClientName.DataBindings.Add(new Binding("Text", dtgvClient.DataSource, "DisplayName", true, DataSourceUpdateMode.Never));
             txbClientAddress.DataBindings.Add(new Binding("Text", dtgvClient.DataSource, "Address", true, DataSourceUpdateMode.Never));
             txbClientPhone.DataBindings.Add(new Binding("Text", dtgvClient.DataSource, "phone", true, DataSourceUpdateMode.Never));
-           
-            //  txbClientPhone.DataBindings.Add(new Binding("Text", dtgvClient.DataSource, "phone", true, DataSourceUpdateMode.Never));
+            cbGender.DataBindings.Add(new Binding("Text", dtgvClient.DataSource, "gender", true, DataSourceUpdateMode.Never));
+            
         }
 
 
@@ -228,10 +230,10 @@ namespace QuanLyQuanMyCayThanhNhan
             string name = txbClientName.Text;
             string address = txbClientAddress.Text;
             string phone = txbClientPhone.Text;
-
+            string gender= cbGender.Text;   
             if (funtion.Instance.checkName(txbClientName.Text))
                 if (funtion.Instance.checkPhone(txbClientPhone.Text))
-                    if (ClientDAO.Instance.InsertClient(name, address, phone))
+                    if (ClientDAO.Instance.InsertClient(name, address, phone,gender))
                     {
                         MessageBox.Show("Thêm thành công");
                         LoadClient();
@@ -249,13 +251,14 @@ namespace QuanLyQuanMyCayThanhNhan
 
         private void btnEditClient_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txbClientID.Text);
+            string id = txbClientID.Text;
             string name = txbClientName.Text;
             string address = txbClientAddress.Text;
             string phone = txbClientPhone.Text;
-            if(funtion.Instance.checkName(txbClientName.Text))
+            string gender = cbGender.Text;
+            if (funtion.Instance.checkName(txbClientName.Text))
                 if (funtion.Instance.checkPhone(txbClientPhone.Text))
-                    if (ClientDAO.Instance.UpdateClient(id, name, address, phone))
+                    if (ClientDAO.Instance.UpdateClient(id, name, address, phone,gender))
                     {
                         MessageBox.Show("Sửa thành công");
                         LoadClient();
@@ -274,7 +277,7 @@ namespace QuanLyQuanMyCayThanhNhan
 
         private void btnDeleteClient_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txbClientID.Text);
+            string id = txbClientID.Text;
             if (ClientDAO.Instance.DeleteClent(id))
             {
                 MessageBox.Show("Xóa thành công");
@@ -298,8 +301,17 @@ namespace QuanLyQuanMyCayThanhNhan
             cbCategory.DisplayMember="Name";
         }
 
+        private void cbGender_Click(object sender, EventArgs e)
+        {
+            List<string> list = new List<string>();
+            list.Add("Nam"); list.Add("Nữ");
+            cbGender.DataSource = list;
+        }
+
         #endregion Event
 
-
+       
+        
+        
     }
 }

@@ -32,7 +32,7 @@ namespace QuanLyQuanMyCayThanhNhan
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.uSPGetListBillByDateBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.quanLyQuanMyCayThanhNhanDataSet1 = new QuanLyQuanMyCayThanhNhan.P_Dataset.QuanLyQuanMyCayThanhNhanDataSet1();
             this.uSPGetListBillByDateBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
@@ -418,6 +418,7 @@ namespace QuanLyQuanMyCayThanhNhan
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(329, 24);
             this.cbGender.TabIndex = 3;
+            
             this.cbGender.Click += new System.EventHandler(this.cbGender_Click);
             // 
             // label5
@@ -653,9 +654,9 @@ namespace QuanLyQuanMyCayThanhNhan
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "ThongKe";
-            reportDataSource1.Value = this.uSPGetListBillByDateBindingSource5;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "ThongKe";
+            reportDataSource2.Value = this.uSPGetListBillByDateBindingSource5;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyQuanMyCayThanhNhan.ReportDataSources.DataReportThongKe.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";

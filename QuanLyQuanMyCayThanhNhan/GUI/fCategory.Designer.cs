@@ -58,6 +58,9 @@ namespace QuanLyQuanMyCayThanhNhan
             this.btnDeleteFood = new System.Windows.Forms.Button();
             this.btnAddFood = new System.Windows.Forms.Button();
             this.tbpClient = new System.Windows.Forms.TabPage();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cbGender = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.txbClientID = new System.Windows.Forms.TextBox();
@@ -75,9 +78,12 @@ namespace QuanLyQuanMyCayThanhNhan
             this.btnAddClient = new System.Windows.Forms.Button();
             this.dtgvClient = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbpFoodCategory = new System.Windows.Forms.TabPage();
             this.dtgvFoodCategory = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -104,6 +110,7 @@ namespace QuanLyQuanMyCayThanhNhan
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
             this.tbpClient.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -379,6 +386,7 @@ namespace QuanLyQuanMyCayThanhNhan
             // 
             // tbpClient
             // 
+            this.tbpClient.Controls.Add(this.panel8);
             this.tbpClient.Controls.Add(this.panel6);
             this.tbpClient.Controls.Add(this.panel5);
             this.tbpClient.Controls.Add(this.panel4);
@@ -394,6 +402,35 @@ namespace QuanLyQuanMyCayThanhNhan
             this.tbpClient.TabIndex = 1;
             this.tbpClient.Text = "Danh sách khách hàng";
             this.tbpClient.UseVisualStyleBackColor = true;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label10);
+            this.panel8.Controls.Add(this.cbGender);
+            this.panel8.Location = new System.Drawing.Point(636, 376);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(466, 35);
+            this.panel8.TabIndex = 5;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(3, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(61, 15);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Giới tính :";
+            // 
+            // cbGender
+            // 
+            this.cbGender.FormattingEnabled = true;
+            this.cbGender.Location = new System.Drawing.Point(125, 6);
+            this.cbGender.Name = "cbGender";
+            this.cbGender.Size = new System.Drawing.Size(329, 24);
+            this.cbGender.TabIndex = 6;
+        
+            this.cbGender.Click += new System.EventHandler(this.cbGender_Click);
             // 
             // panel6
             // 
@@ -422,12 +459,13 @@ namespace QuanLyQuanMyCayThanhNhan
             this.txbClientID.ReadOnly = true;
             this.txbClientID.Size = new System.Drawing.Size(329, 22);
             this.txbClientID.TabIndex = 1;
+            //this.txbClientID.Click += new System.EventHandler(this.txbClientID_Click);
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.txbClientPhone);
-            this.panel5.Location = new System.Drawing.Point(636, 302);
+            this.panel5.Location = new System.Drawing.Point(636, 303);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(466, 35);
             this.panel5.TabIndex = 4;
@@ -537,9 +575,12 @@ namespace QuanLyQuanMyCayThanhNhan
             this.dtgvClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvClient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
-            this.ID,
+            this.Column13,
             this.Column4,
-            this.Column5});
+            this.Column5,
+            this.Column10,
+            this.Column11,
+            this.Column12});
             this.dtgvClient.Location = new System.Drawing.Point(15, 0);
             this.dtgvClient.Name = "dtgvClient";
             this.dtgvClient.ReadOnly = true;
@@ -550,34 +591,54 @@ namespace QuanLyQuanMyCayThanhNhan
             // 
             // Column3
             // 
-            this.Column3.DataPropertyName = "Name";
-            this.Column3.HeaderText = "Tên Khách";
+            this.Column3.DataPropertyName = "Password";
+            this.Column3.HeaderText = "Column3";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 157;
+            this.Column3.Width = 5;
             // 
-            // ID
+            // Column13
             // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
+            this.Column13.DataPropertyName = "Role";
+            this.Column13.HeaderText = "Column13";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 5;
             // 
             // Column4
             // 
-            this.Column4.DataPropertyName = "Address";
-            this.Column4.HeaderText = "Địa chỉ";
+            this.Column4.DataPropertyName = "UserName";
+            this.Column4.HeaderText = "ID";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 278;
             // 
             // Column5
             // 
-            this.Column5.DataPropertyName = "phone";
-            this.Column5.HeaderText = "Số điện thoại";
+            this.Column5.DataPropertyName = "DisplayName";
+            this.Column5.HeaderText = "Tên";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 150;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "Address";
+            this.Column10.HeaderText = "Địa chỉ";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "phone";
+            this.Column11.HeaderText = "SDT";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.DataPropertyName = "Gender";
+            this.Column12.HeaderText = "Giới tính";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
             // 
             // tbpFoodCategory
             // 
@@ -752,6 +813,8 @@ namespace QuanLyQuanMyCayThanhNhan
             this.panel9.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.tbpClient.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -829,13 +892,19 @@ namespace QuanLyQuanMyCayThanhNhan
         private TextBox txbClientID;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column8;
         private DataGridViewTextBoxColumn Column9;
         private DataGridViewTextBoxColumn Column7;
+        private Panel panel8;
+        private Label label10;
+        private ComboBox cbGender;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column13;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column10;
+        private DataGridViewTextBoxColumn Column11;
+        private DataGridViewTextBoxColumn Column12;
     }
 }

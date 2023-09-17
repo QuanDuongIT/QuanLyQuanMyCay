@@ -57,9 +57,9 @@ namespace QuanLyQuanMyCayThanhNhan
 
         void LoadClient()
         {
-            List<Client> listClient = ClientDAO.Instance.GetListClient();
+            List<Account> listClient = ClientDAO.Instance.GetListClient();
             cbClient.DataSource = listClient;
-            cbClient.DisplayMember="Name";
+            cbClient.DisplayMember="DisplayName";
         }
 
         private int LoadFoodListByCategory(int id)
@@ -185,7 +185,7 @@ namespace QuanLyQuanMyCayThanhNhan
 
             if (((sender as Button).Tag as Table).Status.Equals("Có người"))
             {
-                List<Client> listClient = ClientDAO.Instance.GetClientByIDTable(tableID);
+                List<Account> listClient = ClientDAO.Instance.GetClientByIDTable(tableID);
                 cbClient.DataSource = listClient;
                 cbClient.DisplayMember="Name";
 
@@ -224,10 +224,11 @@ namespace QuanLyQuanMyCayThanhNhan
             int idBill = BillDAO.Instance.GetUnCheckBillIDByTableID(table.Id);
             int foodID = (cbFood.SelectedItem as Food).ID;
             int count = ((int)nmAddcount.Value)*x;
-            int clientid = (cbClient.SelectedItem as Client).ID;
+            string clientid = (cbClient.SelectedItem as Account).UserName.ToString();
 
             // idBill == -1&&x>0 nghĩa là Table nếu trống, không người thì không xóa đựợc món ăn vì không có
-            if (idBill == -1&&x>0)
+
+            if (idBill == -1 && x > 0)
             {
                 BillDAO.Instance.InsertBill(table.Id, clientid);
                 BillInfoDAO.Instance.IsertBillInfo(BillDAO.Instance.GetMaxIDBill(), foodID, count);
