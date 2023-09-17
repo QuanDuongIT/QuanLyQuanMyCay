@@ -25,7 +25,7 @@ namespace QuanLyQuanMyCayThanhNhan.DAO
         {
             List<Food> list = new List<Food>();
 
-            string query = "select * from Food where idCategory="+id;
+            string query = "select * from Food where quantity>0 and idCategory="+id;
 
             DataTable data = DataProvider.Instance.ExexuteQuery(query);
             foreach (DataRow item in data.Rows)
