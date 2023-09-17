@@ -76,7 +76,7 @@ namespace QuanLyQuanMyCayThanhNhan
 
         void LoadCategoryIntoCombobox(ComboBox comboBox)
         {
-            cbCategory.DataSource=CategoryDAO.Instance.GetListCategory();// GetCategoryByFoodName("Đồ ăn vặt");//GetListCategory
+            cbCategory.DataSource=CategoryDAO.Instance.GetListCategory();
             comboBox.DisplayMember="Name";
             
         }

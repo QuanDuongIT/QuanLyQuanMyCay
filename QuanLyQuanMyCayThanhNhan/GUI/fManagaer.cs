@@ -44,7 +44,7 @@ namespace QuanLyQuanMyCayThanhNhan
         public Account LoginAccount
         {
             get => loginAccount;
-            set { loginAccount=value; ChangeAccount(loginAccount.Type); }
+            set { loginAccount=value; ChangeAccount(loginAccount.Role); }
 
         }
 
@@ -113,10 +113,11 @@ namespace QuanLyQuanMyCayThanhNhan
         }
 
 
-        void ChangeAccount(int type)
+        void ChangeAccount(string role)
         {
-            adminToolStripMenuItem.Visible = type==1;
-            
+           
+            adminToolStripMenuItem.Visible = role.Equals("Quản lý");
+           
             thôngTinTàiKhoảnToolStripMenuItem.Text+="("+loginAccount.DisplayName+")";
         }
        

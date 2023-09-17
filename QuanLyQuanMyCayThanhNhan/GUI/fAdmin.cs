@@ -1,4 +1,5 @@
-﻿using QuanLyQuanMyCayThanhNhan.DAO;
+﻿using Microsoft.Reporting.Map.WebForms.BingMaps;
+using QuanLyQuanMyCayThanhNhan.DAO;
 using QuanLyQuanMyCayThanhNhan.DTO;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QuanLyQuanMyCayThanhNhan
 {
@@ -58,25 +60,21 @@ namespace QuanLyQuanMyCayThanhNhan
         {
             txbUserName.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "UserName", true, DataSourceUpdateMode.Never));
             txbDisPlayName.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "DisplayName", true, DataSourceUpdateMode.Never));
-            nmudAccount.DataBindings.Add(new Binding("Value", dtgvAccount.DataSource, "Type", true, DataSourceUpdateMode.Never));
+            cbRole.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "Role", true, DataSourceUpdateMode.Never));
+            txbAddress.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "Address", true, DataSourceUpdateMode.Never));
+            txbPhone.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "Phone", true, DataSourceUpdateMode.Never));
+            cbGender.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "Gender", true, DataSourceUpdateMode.Never));
+            
         }
         void LoadAccount()
         {
             acountList.DataSource=AccountDAO.Instance.GetListAccount();
-            if (nmudAccount.Value==1)
-            {
-                label12.Text="Loại tài khoản :              `           Quan lý";
-            }
-            else
-            {
-                label12.Text="Loại tài khoản :                          Nhân viên";
-            }
         }
 
-        void AddAcount(string userName, string displayName, int type)
+        void AddAcount(string userName, string displayName, string role, string address, string phone, string gender)
         {
 
-            if (AccountDAO.Instance.InsertAccount(userName, displayName, type))
+            if (AccountDAO.Instance.InsertAccount(userName, displayName, role, address, phone, gender))
             {
                 MessageBox.Show("Thêm Thành công");
             }
@@ -87,9 +85,9 @@ namespace QuanLyQuanMyCayThanhNhan
             LoadAccount();
         }
 
-        void EditAcount(string userName, string displayName, int type)
+        void EditAcount(string userName, string displayName, string role, string address, string phone, string gender)
         {
-            if (AccountDAO.Instance.UpdateAccount(userName, displayName, type))
+            if (AccountDAO.Instance.UpdateAccount(userName, displayName, role, address, phone, gender))
             {
                 MessageBox.Show("Sửa Thành công");
             }
@@ -156,8 +154,11 @@ namespace QuanLyQuanMyCayThanhNhan
         {
             string userName = txbUserName.Text;
             string displayName = txbDisPlayName.Text;
-            int type = (int)nmudAccount.Value;
-            AddAcount(userName, displayName, type);
+            string role = cbRole.Text;
+            string address = txbAddress.Text;
+            string phone = txbPhone.Text;
+            string gender = cbGender.Text;
+            AddAcount(userName, displayName, role,address,phone,gender);
         }
 
         private void btnDeleteAccount_Click(object sender, EventArgs e)
@@ -170,8 +171,11 @@ namespace QuanLyQuanMyCayThanhNhan
         {
             string userName = txbUserName.Text;
             string displayName = txbDisPlayName.Text;
-            int type = (int)nmudAccount.Value;
-            EditAcount(userName, displayName, type);
+            string role = cbRole.Text;
+            string address = txbAddress.Text;
+            string phone = txbPhone.Text;
+            string gender = cbGender.Text;
+            EditAcount(userName, displayName, role, address, phone, gender);
         }
 
         private void btnResetPassWord_Click(object sender, EventArgs e)
@@ -225,35 +229,23 @@ namespace QuanLyQuanMyCayThanhNhan
         }
 
 
-
-        private void nmudAccount_ValueChanged(object sender, EventArgs e)
+        private void cbGender_Click(object sender, EventArgs e)
         {
-            if (nmudAccount.Value==1)
-            {
-                label12.Text="Loại tài khoản :              `           Quan lý";
-            }
-            else
-            {
-                label12.Text="Loại tài khoản :                          Nhân viên";
-            }
+            List<string> list = new List<string>();
+            list.Add("Nam"); list.Add("Nữ");
+            cbGender.DataSource = list;
         }
 
-        private void nmudAccount_MouseClick(object sender, MouseEventArgs e)
+        private void cbRole_Click(object sender, EventArgs e)
         {
-            if (nmudAccount.Value==1)
-            {
-                nmudAccount.Value=0;
-            }
-            else
-            {
-                nmudAccount.Value=1;
-            }
+            List<string> list = new List<string>();
+            list.Add("Quản lý"); list.Add("Nhân viên");
+            cbRole.DataSource = list;
         }
-
-
 
 
         #endregion
+
 
     }
 }
