@@ -212,6 +212,7 @@ namespace QuanLyQuanMyCayThanhNhan
             // columnHeader3
             // 
             this.columnHeader3.Text = "";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader3.Width = 100;
             // 
             // columnHeader4
