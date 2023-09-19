@@ -34,7 +34,15 @@ namespace QuanLyQuanMyCayThanhNhan
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbpFood = new System.Windows.Forms.TabPage();
             this.dtgvFood = new System.Windows.Forms.DataGridView();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.nmQuantity = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.nmFoodPrice = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
@@ -73,13 +81,6 @@ namespace QuanLyQuanMyCayThanhNhan
             this.btnDeleteClient = new System.Windows.Forms.Button();
             this.btnAddClient = new System.Windows.Forms.Button();
             this.dtgvClient = new System.Windows.Forms.DataGridView();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbpFoodCategory = new System.Windows.Forms.TabPage();
             this.dtgvFoodCategory = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,18 +96,19 @@ namespace QuanLyQuanMyCayThanhNhan
             this.btnEditFoodCategory = new System.Windows.Forms.Button();
             this.btnDeleteFoodCategory = new System.Windows.Forms.Button();
             this.btnAddFoodCategory = new System.Windows.Forms.Button();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.nmQuantity = new System.Windows.Forms.NumericUpDown();
-            this.label11 = new System.Windows.Forms.Label();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tbpFood.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmQuantity)).BeginInit();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodPrice)).BeginInit();
             this.panel11.SuspendLayout();
@@ -126,8 +128,6 @@ namespace QuanLyQuanMyCayThanhNhan
             this.panel1.SuspendLayout();
             this.panel32.SuspendLayout();
             this.panel22.SuspendLayout();
-            this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -172,6 +172,43 @@ namespace QuanLyQuanMyCayThanhNhan
             this.dtgvFood.Size = new System.Drawing.Size(601, 584);
             this.dtgvFood.TabIndex = 1;
             // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Name";
+            this.Column6.HeaderText = "Tên thức ăn";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 380;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "ID";
+            this.Column8.HeaderText = "ID";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "CategoryID";
+            this.Column9.HeaderText = "CategoryID";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "Price";
+            this.Column7.HeaderText = "Giá";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 200;
+            // 
+            // Column14
+            // 
+            this.Column14.DataPropertyName = "Quantity1";
+            this.Column14.HeaderText = "Số lượng";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -188,6 +225,38 @@ namespace QuanLyQuanMyCayThanhNhan
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(462, 571);
             this.panel2.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.nmQuantity);
+            this.panel13.Controls.Add(this.label11);
+            this.panel13.Location = new System.Drawing.Point(36, 348);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(384, 35);
+            this.panel13.TabIndex = 10;
+            // 
+            // nmQuantity
+            // 
+            this.nmQuantity.Location = new System.Drawing.Point(93, 9);
+            this.nmQuantity.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.nmQuantity.Name = "nmQuantity";
+            this.nmQuantity.Size = new System.Drawing.Size(277, 22);
+            this.nmQuantity.TabIndex = 3;
+            this.nmQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(3, 10);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(63, 15);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Số lượng :";
             // 
             // panel12
             // 
@@ -565,57 +634,6 @@ namespace QuanLyQuanMyCayThanhNhan
             this.dtgvClient.Size = new System.Drawing.Size(601, 584);
             this.dtgvClient.TabIndex = 0;
             // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Password";
-            this.Column3.HeaderText = "Column3";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 5;
-            // 
-            // Column13
-            // 
-            this.Column13.DataPropertyName = "Role";
-            this.Column13.HeaderText = "Column13";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            this.Column13.Width = 5;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "UserName";
-            this.Column4.HeaderText = "ID";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "DisplayName";
-            this.Column5.HeaderText = "Tên";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "Address";
-            this.Column10.HeaderText = "Địa chỉ";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "phone";
-            this.Column11.HeaderText = "SDT";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.DataPropertyName = "Gender";
-            this.Column12.HeaderText = "Giới tính";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            // 
             // tbpFoodCategory
             // 
             this.tbpFoodCategory.Controls.Add(this.dtgvFoodCategory);
@@ -763,74 +781,59 @@ namespace QuanLyQuanMyCayThanhNhan
             this.btnAddFoodCategory.UseVisualStyleBackColor = true;
             this.btnAddFoodCategory.Click += new System.EventHandler(this.btnAddFoodCategory_Click);
             // 
-            // Column6
+            // Column3
             // 
-            this.Column6.DataPropertyName = "Name";
-            this.Column6.HeaderText = "Tên thức ăn";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 380;
+            this.Column3.DataPropertyName = "Password";
+            this.Column3.HeaderText = "Column3";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 5;
             // 
-            // Column8
+            // Column13
             // 
-            this.Column8.DataPropertyName = "ID";
-            this.Column8.HeaderText = "ID";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
+            this.Column13.DataPropertyName = "Role";
+            this.Column13.HeaderText = "Column13";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 5;
             // 
-            // Column9
+            // Column4
             // 
-            this.Column9.DataPropertyName = "CategoryID";
-            this.Column9.HeaderText = "CategoryID";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
+            this.Column4.DataPropertyName = "UserName";
+            this.Column4.HeaderText = "ID";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 5;
             // 
-            // Column7
+            // Column5
             // 
-            this.Column7.DataPropertyName = "Price";
-            this.Column7.HeaderText = "Giá";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 200;
+            this.Column5.DataPropertyName = "DisplayName";
+            this.Column5.HeaderText = "Tên";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 150;
             // 
-            // Column14
+            // Column10
             // 
-            this.Column14.DataPropertyName = "Quantity1";
-            this.Column14.HeaderText = "Số lượng";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
+            this.Column10.DataPropertyName = "Address";
+            this.Column10.HeaderText = "Địa chỉ";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 210;
             // 
-            // panel13
+            // Column11
             // 
-            this.panel13.Controls.Add(this.nmQuantity);
-            this.panel13.Controls.Add(this.label11);
-            this.panel13.Location = new System.Drawing.Point(36, 348);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(384, 35);
-            this.panel13.TabIndex = 10;
+            this.Column11.DataPropertyName = "phone";
+            this.Column11.HeaderText = "SDT";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
             // 
-            // nmQuantity
+            // Column12
             // 
-            this.nmQuantity.Location = new System.Drawing.Point(93, 9);
-            this.nmQuantity.Maximum = new decimal(new int[] {
-            1000000000,
-            0,
-            0,
-            0});
-            this.nmQuantity.Name = "nmQuantity";
-            this.nmQuantity.Size = new System.Drawing.Size(277, 22);
-            this.nmQuantity.TabIndex = 3;
-            this.nmQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(3, 10);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 15);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Số lượng :";
+            this.Column12.DataPropertyName = "Gender";
+            this.Column12.HeaderText = "Giới tính";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
             // 
             // fCategory
             // 
@@ -847,6 +850,9 @@ namespace QuanLyQuanMyCayThanhNhan
             ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmQuantity)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodPrice)).EndInit();
@@ -877,9 +883,6 @@ namespace QuanLyQuanMyCayThanhNhan
             this.panel32.ResumeLayout(false);
             this.panel32.PerformLayout();
             this.panel22.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmQuantity)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -943,13 +946,6 @@ namespace QuanLyQuanMyCayThanhNhan
         private Panel panel8;
         private Label label10;
         private ComboBox cbGender;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column13;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column10;
-        private DataGridViewTextBoxColumn Column11;
-        private DataGridViewTextBoxColumn Column12;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column8;
         private DataGridViewTextBoxColumn Column9;
@@ -958,5 +954,12 @@ namespace QuanLyQuanMyCayThanhNhan
         private Panel panel13;
         private NumericUpDown nmQuantity;
         private Label label11;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column13;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column10;
+        private DataGridViewTextBoxColumn Column11;
+        private DataGridViewTextBoxColumn Column12;
     }
 }

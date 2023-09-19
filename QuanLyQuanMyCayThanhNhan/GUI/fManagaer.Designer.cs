@@ -155,9 +155,9 @@ namespace QuanLyQuanMyCayThanhNhan
             this.flpTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.flpTable.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flpTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.flpTable.Location = new System.Drawing.Point(43, 43);
+            this.flpTable.Location = new System.Drawing.Point(35, 73);
             this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(534, 677);
+            this.flpTable.Size = new System.Drawing.Size(542, 647);
             this.flpTable.TabIndex = 4;
             // 
             // pnBill
@@ -196,6 +196,7 @@ namespace QuanLyQuanMyCayThanhNhan
             this.lsvBill.TabIndex = 0;
             this.lsvBill.UseCompatibleStateImageBehavior = false;
             this.lsvBill.View = System.Windows.Forms.View.Details;
+            this.lsvBill.SelectedIndexChanged += new System.EventHandler(this.lsvBill_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -266,6 +267,7 @@ namespace QuanLyQuanMyCayThanhNhan
             this.btnPrintBill.TabIndex = 8;
             this.btnPrintBill.Text = "In Hóa đơn";
             this.btnPrintBill.UseVisualStyleBackColor = true;
+            this.btnPrintBill.Click += new System.EventHandler(this.btnPrintBill_Click);
             // 
             // label1
             // 
@@ -303,6 +305,7 @@ namespace QuanLyQuanMyCayThanhNhan
             this.btnCheckOut.TabIndex = 4;
             this.btnCheckOut.Text = "Thanh Toán";
             this.btnCheckOut.UseVisualStyleBackColor = true;
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // btnSwithTable
             // 
@@ -313,6 +316,7 @@ namespace QuanLyQuanMyCayThanhNhan
             this.btnSwithTable.TabIndex = 6;
             this.btnSwithTable.Text = "Chuyển Bàn";
             this.btnSwithTable.UseVisualStyleBackColor = false;
+            this.btnSwithTable.Click += new System.EventHandler(this.btnSwithTable_Click);
             // 
             // label3
             // 
@@ -353,6 +357,7 @@ namespace QuanLyQuanMyCayThanhNhan
             this.nmDisCount.Size = new System.Drawing.Size(64, 35);
             this.nmDisCount.TabIndex = 4;
             this.nmDisCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nmDisCount.ValueChanged += new System.EventHandler(this.nmDisCount_ValueChanged);
             // 
             // btnDeleteTableBill
             // 
@@ -363,6 +368,7 @@ namespace QuanLyQuanMyCayThanhNhan
             this.btnDeleteTableBill.TabIndex = 6;
             this.btnDeleteTableBill.Text = "Hủy bàn";
             this.btnDeleteTableBill.UseVisualStyleBackColor = false;
+            this.btnDeleteTableBill.Click += new System.EventHandler(this.btnDeleteTableBill_Click);
             // 
             // cbClient
             // 
@@ -382,6 +388,7 @@ namespace QuanLyQuanMyCayThanhNhan
             this.btnDeleteFood.TabIndex = 4;
             this.btnDeleteFood.Text = "Xóa món";
             this.btnDeleteFood.UseVisualStyleBackColor = false;
+            this.btnDeleteFood.Click += new System.EventHandler(this.btnDeleteFood_Click);
             // 
             // nmAddcount
             // 
@@ -407,6 +414,7 @@ namespace QuanLyQuanMyCayThanhNhan
             this.btnAddFood.TabIndex = 2;
             this.btnAddFood.Text = "Thêm món";
             this.btnAddFood.UseVisualStyleBackColor = false;
+            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // cbFood
             // 
@@ -427,6 +435,7 @@ namespace QuanLyQuanMyCayThanhNhan
             this.cbCaterogy.Name = "cbCaterogy";
             this.cbCaterogy.Size = new System.Drawing.Size(212, 21);
             this.cbCaterogy.TabIndex = 0;
+            this.cbCaterogy.SelectedIndexChanged += new System.EventHandler(this.cbCaterogy_SelectedIndexChanged);
             // 
             // fManagaer
             // 

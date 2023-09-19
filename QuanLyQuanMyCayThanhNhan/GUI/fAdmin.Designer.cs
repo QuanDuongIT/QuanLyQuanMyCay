@@ -32,7 +32,7 @@ namespace QuanLyQuanMyCayThanhNhan
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.uSPGetListBillByDateBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.quanLyQuanMyCayThanhNhanDataSet1 = new QuanLyQuanMyCayThanhNhan.P_Dataset.QuanLyQuanMyCayThanhNhanDataSet1();
             this.uSPGetListBillByDateBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
@@ -81,12 +81,6 @@ namespace QuanLyQuanMyCayThanhNhan
             this.label14 = new System.Windows.Forms.Label();
             this.txbUserName = new System.Windows.Forms.TextBox();
             this.dtgvAccount = new System.Windows.Forms.DataGridView();
-            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DisplayName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tpReport = new System.Windows.Forms.TabPage();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.uSPGetListBillByDateBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -98,6 +92,12 @@ namespace QuanLyQuanMyCayThanhNhan
             this.uSPGetTableListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uSP_GetTableListTableAdapter = new QuanLyQuanMyCayThanhNhan.P_Dataset.QuanLyQuanMyCayThanhNhanDataSetTableAdapters.USP_GetTableListTableAdapter();
             this.USP_GetListBillByDateBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DisplayName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateBindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyQuanMyCayThanhNhanDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateBindingSource4)).BeginInit();
@@ -418,7 +418,6 @@ namespace QuanLyQuanMyCayThanhNhan
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(329, 24);
             this.cbGender.TabIndex = 3;
-            
             this.cbGender.Click += new System.EventHandler(this.cbGender_Click);
             // 
             // label5
@@ -592,54 +591,6 @@ namespace QuanLyQuanMyCayThanhNhan
             this.dtgvAccount.Size = new System.Drawing.Size(958, 584);
             this.dtgvAccount.TabIndex = 0;
             // 
-            // UserName
-            // 
-            this.UserName.DataPropertyName = "UserName";
-            this.UserName.HeaderText = "Tên tài khoản";
-            this.UserName.Name = "UserName";
-            this.UserName.ReadOnly = true;
-            this.UserName.Width = 140;
-            // 
-            // DisplayName
-            // 
-            this.DisplayName.DataPropertyName = "DisplayName";
-            this.DisplayName.HeaderText = "Tên hiển thị";
-            this.DisplayName.Name = "DisplayName";
-            this.DisplayName.ReadOnly = true;
-            this.DisplayName.Width = 140;
-            // 
-            // Type
-            // 
-            this.Type.DataPropertyName = "Role";
-            this.Type.FillWeight = 50F;
-            this.Type.HeaderText = "Loại tài khoản";
-            this.Type.Name = "Type";
-            this.Type.ReadOnly = true;
-            // 
-            // Address
-            // 
-            this.Address.DataPropertyName = "Address";
-            this.Address.HeaderText = "Địa Chỉ";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            this.Address.Width = 340;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "Phone";
-            this.Column6.HeaderText = "Số DT";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 150;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "Gender";
-            this.Column7.HeaderText = "Giới tính";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 50;
-            // 
             // tpReport
             // 
             this.tpReport.Controls.Add(this.reportViewer1);
@@ -654,9 +605,9 @@ namespace QuanLyQuanMyCayThanhNhan
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "ThongKe";
-            reportDataSource2.Value = this.uSPGetListBillByDateBindingSource5;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "ThongKe";
+            reportDataSource1.Value = this.uSPGetListBillByDateBindingSource5;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyQuanMyCayThanhNhan.ReportDataSources.DataReportThongKe.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";
@@ -706,6 +657,54 @@ namespace QuanLyQuanMyCayThanhNhan
             // 
             this.USP_GetListBillByDateBindingSource.DataMember = "USP_GetListBillByDate";
             this.USP_GetListBillByDateBindingSource.DataSource = this.quanLyQuanMyCayThanhNhanDataSet1;
+            // 
+            // UserName
+            // 
+            this.UserName.DataPropertyName = "UserName";
+            this.UserName.HeaderText = "Tên tài khoản";
+            this.UserName.Name = "UserName";
+            this.UserName.ReadOnly = true;
+            this.UserName.Width = 140;
+            // 
+            // DisplayName
+            // 
+            this.DisplayName.DataPropertyName = "DisplayName";
+            this.DisplayName.HeaderText = "Tên hiển thị";
+            this.DisplayName.Name = "DisplayName";
+            this.DisplayName.ReadOnly = true;
+            this.DisplayName.Width = 140;
+            // 
+            // Type
+            // 
+            this.Type.DataPropertyName = "Role";
+            this.Type.FillWeight = 50F;
+            this.Type.HeaderText = "Loại tài khoản";
+            this.Type.Name = "Type";
+            this.Type.ReadOnly = true;
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "Address";
+            this.Address.HeaderText = "Địa Chỉ";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            this.Address.Width = 330;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Phone";
+            this.Column6.HeaderText = "Số DT";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 150;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "Gender";
+            this.Column7.HeaderText = "Giới tính";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 60;
             // 
             // fAdmin
             // 
@@ -811,15 +810,15 @@ namespace QuanLyQuanMyCayThanhNhan
         private Label label14;
         private TextBox txbUserName;
         private DataGridView dtgvAccount;
+        private Panel panel7;
+        private Label label5;
+        private ComboBox cbGender;
+        private ComboBox cbRole;
         private DataGridViewTextBoxColumn UserName;
         private DataGridViewTextBoxColumn DisplayName;
         private DataGridViewTextBoxColumn Type;
         private DataGridViewTextBoxColumn Address;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
-        private Panel panel7;
-        private Label label5;
-        private ComboBox cbGender;
-        private ComboBox cbRole;
     }
 }

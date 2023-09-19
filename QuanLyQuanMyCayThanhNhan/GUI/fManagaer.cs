@@ -32,8 +32,7 @@ namespace QuanLyQuanMyCayThanhNhan
             LoadCategory();
             LoadClient();
 
-            //pnBill.Visible = false;
-            pnBill.Size = new Size(0, 699);
+          
             //panel1.Hide();
             //panel2.Hide();
             //panel3.Hide();
@@ -648,7 +647,7 @@ namespace QuanLyQuanMyCayThanhNhan
             int discount = (int)nmDisCount.Value;
             float sum = sumprice - (sumprice / 100) * discount;
 
-            MessageBox.Show("kashd "+ txbSumPrice.Text);
+           
             if (idBill != -1)
             {
                 if (MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn cho {0}\n Tổng tiền - (Tông tiền /100)* Giảm giá =\n{1} -({1}/100)*{2} = {3}", table.Name, sumprice, discount, sum), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
