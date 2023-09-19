@@ -39,7 +39,6 @@ namespace QuanLyQuanMyCayThanhNhan
             this.thanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmMónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xóaMónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
             this.pnBill = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lsvBill = new System.Windows.Forms.ListView();
@@ -67,12 +66,15 @@ namespace QuanLyQuanMyCayThanhNhan
             this.btnAddFood = new System.Windows.Forms.Button();
             this.cbFood = new System.Windows.Forms.ComboBox();
             this.cbCaterogy = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.pnBill.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmDisCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmAddcount)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -128,7 +130,7 @@ namespace QuanLyQuanMyCayThanhNhan
             // 
             this.thanhToánToolStripMenuItem.Name = "thanhToánToolStripMenuItem";
             this.thanhToánToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.thanhToánToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.thanhToánToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.thanhToánToolStripMenuItem.Text = "Thanh Toán";
             this.thanhToánToolStripMenuItem.Click += new System.EventHandler(this.thanhToánToolStripMenuItem_Click_1);
             // 
@@ -136,7 +138,7 @@ namespace QuanLyQuanMyCayThanhNhan
             // 
             this.thêmMónToolStripMenuItem.Name = "thêmMónToolStripMenuItem";
             this.thêmMónToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.thêmMónToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.thêmMónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.thêmMónToolStripMenuItem.Text = "Thêm Món";
             this.thêmMónToolStripMenuItem.Click += new System.EventHandler(this.thêmMónToolStripMenuItem_Click);
             // 
@@ -144,29 +146,17 @@ namespace QuanLyQuanMyCayThanhNhan
             // 
             this.xóaMónToolStripMenuItem.Name = "xóaMónToolStripMenuItem";
             this.xóaMónToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.xóaMónToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.xóaMónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.xóaMónToolStripMenuItem.Text = "Xóa món";
             this.xóaMónToolStripMenuItem.Click += new System.EventHandler(this.xóaMónToolStripMenuItem_Click);
-            // 
-            // flpTable
-            // 
-            this.flpTable.AutoScroll = true;
-            this.flpTable.BackColor = System.Drawing.Color.White;
-            this.flpTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.flpTable.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flpTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.flpTable.Location = new System.Drawing.Point(35, 73);
-            this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(542, 647);
-            this.flpTable.TabIndex = 4;
             // 
             // pnBill
             // 
             this.pnBill.Controls.Add(this.panel3);
             this.pnBill.Controls.Add(this.panel1);
-            this.pnBill.Location = new System.Drawing.Point(594, 43);
+            this.pnBill.Location = new System.Drawing.Point(605, 43);
             this.pnBill.Name = "pnBill";
-            this.pnBill.Size = new System.Drawing.Size(759, 699);
+            this.pnBill.Size = new System.Drawing.Size(748, 699);
             this.pnBill.TabIndex = 0;
             // 
             // panel3
@@ -438,14 +428,34 @@ namespace QuanLyQuanMyCayThanhNhan
             this.cbCaterogy.TabIndex = 0;
             this.cbCaterogy.SelectedIndexChanged += new System.EventHandler(this.cbCaterogy_SelectedIndexChanged);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.flpTable);
+            this.panel2.Location = new System.Drawing.Point(12, 43);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(576, 699);
+            this.panel2.TabIndex = 5;
+            // 
+            // flpTable
+            // 
+            this.flpTable.AutoScroll = true;
+            this.flpTable.BackColor = System.Drawing.Color.White;
+            this.flpTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.flpTable.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flpTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.flpTable.Location = new System.Drawing.Point(15, 33);
+            this.flpTable.Name = "flpTable";
+            this.flpTable.Size = new System.Drawing.Size(542, 647);
+            this.flpTable.TabIndex = 5;
+            // 
             // fManagaer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1353, 754);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnBill);
-            this.Controls.Add(this.flpTable);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.MainMenuStrip = this.menuStrip1;
@@ -460,6 +470,7 @@ namespace QuanLyQuanMyCayThanhNhan
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmDisCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmAddcount)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,7 +486,6 @@ namespace QuanLyQuanMyCayThanhNhan
         private ToolStripMenuItem thanhToánToolStripMenuItem;
         private ToolStripMenuItem thêmMónToolStripMenuItem;
         private ToolStripMenuItem xóaMónToolStripMenuItem;
-        private FlowLayoutPanel flpTable;
         private Panel pnBill;
         private Panel panel3;
         private ListView lsvBill;
@@ -503,5 +513,7 @@ namespace QuanLyQuanMyCayThanhNhan
         private Button btnAddFood;
         private ComboBox cbFood;
         private ComboBox cbCaterogy;
+        private Panel panel2;
+        private FlowLayoutPanel flpTable;
     }
 }
