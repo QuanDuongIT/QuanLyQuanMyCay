@@ -39,7 +39,7 @@ namespace QuanLyQuanMyCayThanhNhan.DAO
 
 
 
-        public void InsertBill(int idtable,int idclient)      
+        public void InsertBill(int idtable,string idclient)      
         {
            
             DataProvider.Instance.ExexuteQuery("exec USP_InsertBill\r\n @idTable , @idClient ", new object[] {idtable,idclient});

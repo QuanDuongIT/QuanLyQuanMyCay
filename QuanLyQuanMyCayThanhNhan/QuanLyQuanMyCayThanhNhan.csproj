@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\AColor.cs" />
     <Compile Include="DAO\BillDAO.cs" />
     <Compile Include="DAO\BillIfoDAO.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
@@ -78,7 +79,6 @@
     <Compile Include="DTO\Bill.cs" />
     <Compile Include="DTO\BillInfo.cs" />
     <Compile Include="DTO\Category.cs" />
-    <Compile Include="DTO\Client.cs" />
     <Compile Include="DTO\Food.cs" />
     <Compile Include="DTO\Menu.cs" />
     <Compile Include="DTO\Table.cs" />

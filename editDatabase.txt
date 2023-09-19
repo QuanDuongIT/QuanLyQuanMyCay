@@ -1,0 +1,28 @@
+Accoount.Type(int) -->Account.Role
+add Account.adress
+add Account.phone
+add Account.gender
+
+create trigger ChangeBill
+on BillInfo for Insert
+as
+declare @slchange int
+select @slchange=count from inserted
+update Food
+set quantity=quantity-@slchange
+
+create trigger ChangeBill_U
+on BillInfo for Update
+as
+declare @slchange int
+select @slchange=inserted.count-deleted.count from inserted,deleted
+update Food
+set quantity=quantity-@slchange
+
+create trigger ChangeBill_D
+on BillInfo for Delete 
+as
+declare @slchange int
+select @slchange=deleted.count from deleted
+update Food
+set quantity=quantity+@slchange

@@ -20,60 +20,45 @@ namespace QuanLyQuanMyCayThanhNhan.DAO
         }
         private ClientDAO() { }
 
-        //public List<Food> GetFoodByCategoryID(int id)
-        //{
-        //    List<Food> list = new List<Food>();
-
-        //    string query = "select * from Food where idCategory="+id;
-
-        //    DataTable data = DataProvider.Instance.ExexuteQuery(query);
-        //    foreach (DataRow item in data.Rows)
-        //    {
-        //        Food food = new Food(item);
-        //        list.Add(food);
-        //    }
-
-        //    return list;
-        //}
-
-        public List<Client> GetListClient()
+       
+        public List<Account> GetListClient()
         {
-            List<Client> list = new List<Client>();
+            List<Account> list = new List<Account>();
 
-            string query = "select * from Client";
+            string query = "select UserName,DisPlayName,Role,Address,Phone,Gender from Account where Role=N'Khách hàng'";
 
             DataTable data = DataProvider.Instance.ExexuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
-                Client client = new Client(item);
+                Account client = new Account(item);
                 list.Add(client);
             }
 
             return list;
         }
 
-        public List<Client> GetClientByIDTable(int idTAble)
+        public List<Account> GetClientByIDTable(int idTAble)
         {
            
-            List<Client> list = new List<Client>();
-            string query = "select f.id,f.name,f.address,f.phone from Client as f,Bill,TableFood where f.id=Bill.idclient and Bill.idTable=TableFood.id and Bill.DateCheckOut is NULL and TableFood.id="+idTAble.ToString();
-     
+            List<Account> list = new List<Account>();
+            string query = "exec GetClientByIDTable " + idTAble.ToString();
+
             DataTable data = DataProvider.Instance.ExexuteQuery(query);
-           
+
             foreach (DataRow item in data.Rows)
             {
-                Client client = new Client(item);
+                Account client = new Account(item);
                 list.Add(client);
             }
-            
+           
             return list;
         }
 
 
-        public bool InsertClient(string name, string address, string phone)
+        public bool InsertClient(string name, string address, string phone , string gender)
         {
         //    string query = string.Format("insert dbo.Client (name,address,phone) values ( N'{0}' , N'{1}' , N'{2}' ) ", name, address,phone);
-            string query = string.Format("exec USP_InsertClient  N'{0}' , N'{1}' , N'{2}'  ", name, address, phone);
+            string query = string.Format("exec USP_InsertClient  N'{0}' , N'{1}' , N'{2}' , N'{3}' ", name, address, phone,gender);
 
             int result = DataProvider.Instance.ExexuteNonQuery(query);
             return result>0;
@@ -81,19 +66,18 @@ namespace QuanLyQuanMyCayThanhNhan.DAO
 
         
 
-        public bool UpdateClient(int id, string newname, string address, string phone)
+        public bool UpdateClient(string id, string newname, string address, string phone, string gender)
         {
-         //   string query = string.Format("update dbo.Client set  name=N'{1}',address=N'{2}' , phone=N'{3}'  where id={0} ", id, newname, address, phone);
-            string query = string.Format("exec USP_EditClient {0} , N'{1}' , N'{2}' , N'{3}' ", id, newname, address, phone);
+            string query = string.Format("exec USP_EditClient N'{0}' , N'{1}' , N'{2}' , N'{3}', N'{4}' ", id, newname, address, phone,gender);
             int result = DataProvider.Instance.ExexuteNonQuery(query);
             return result>0;
 
         }
 
-        public bool DeleteClent(int id)
+        public bool DeleteClent(string id)
         {
             //    MessageBox.Show(""+name);
-            string query = string.Format("exec USP_DeleteClient {0} ", id);
+            string query = string.Format("exec USP_DeleteClient N'{0}' ", id);
             int result = DataProvider.Instance.ExexuteNonQuery(query);
             return result>0;
         }

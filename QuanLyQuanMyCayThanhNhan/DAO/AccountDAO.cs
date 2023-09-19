@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Windows.Forms;
 
 namespace QuanLyQuanMyCayThanhNhan.DAO
 {
@@ -51,18 +52,20 @@ namespace QuanLyQuanMyCayThanhNhan.DAO
 
         public bool UpdateAccount(string userName,string displayName, string pass,string newpass)
         {
-            int result = DataProvider.Instance.ExexuteNonQuery("exec USP_UpdateAccount @userName , @displayName , @password , @newpassword ",new object[] { userName, displayName, Encode(pass), Encode(newpass) });
+            string query = "exec USP_UpdateAccount @userName , @displayName , @password , @newpassword ";
+            int result = DataProvider.Instance.ExexuteNonQuery(query,new object[] { userName, displayName, Encode(pass), Encode(newpass) });
             return result>0;
         }
 
         public DataTable GetListAccount()
         {
-            return DataProvider.Instance.ExexuteQuery("select UserName, DisPlayName,Type from dbo.Account");
+            return DataProvider.Instance.ExexuteQuery("select UserName, DisPlayName,Role,Address,Phone,Gender from dbo.Account where Role = N'Quản lý' or Role = N'Nhân viên' ");
+            
         }
 
         public Account GetAccountByUsername(string username)
         {
-            DataTable data = DataProvider.Instance.ExexuteQuery("select * from account where userName ='"+username+"'");
+            DataTable data = DataProvider.Instance.ExexuteQuery("select UserName,DisPlayName,Role,Address,Phone,Gender from account where userName ='"+username+"'");
             foreach (DataRow item in data.Rows)
             {
                 return new Account(item); 
@@ -70,13 +73,13 @@ namespace QuanLyQuanMyCayThanhNhan.DAO
             return null;
         }
 
-        public bool InsertAccount(string name,string displayName,int type)
+        public bool InsertAccount(string name,string displayName, string role, string address, string phone, string gender)
         {
-            //   MessageBox.Show(""+DataProvider.Instance.ExexuteQuery("select * from Account where userName = '"+name+"'").Rows.Count);
-
             if (DataProvider.Instance.ExexuteQuery("select * from Account where userName = '"+name+"'").Rows.Count==0)
             {
-                string query = string.Format("insert dbo.Account ( UserName, DisplayName,Password, Type ) values ( N'{0}' , N'{1}',N'1962026656160185351301320480154111117132155' ,{2} )", name, displayName, type);
+                string query = string.Format("" +
+                    "insert dbo.Account ( UserName, DisplayName,Password, Role , Address , Phone , Gender  ) " +
+                    "values ( N'{0}' , N'{1}',N'1962026656160185351301320480154111117132155' ,N'{2}',N'{3}',N'{4}',N'{5}' )", name, displayName, role,address,phone,gender);
                 int result = DataProvider.Instance.ExexuteNonQuery(query);
                 return result>0;
             }
@@ -84,9 +87,9 @@ namespace QuanLyQuanMyCayThanhNhan.DAO
             return false;
 
         }
-        public bool UpdateAccount(string name, string displayName, int type)
+        public bool UpdateAccount(string name, string displayName, string role, string address, string phone, string gender)
         {
-            string query = string.Format("update dbo.Account set  DisplayName=N'{1}' ,  Type={2}  where UserName=N'{0}' ", name, displayName, type);
+            string query = string.Format("update dbo.Account set  DisplayName=N'{1}' ,  Role=N'{2}' ,  Address=N'{3}',  Phone=N'{4}',  Gender=N'{5}'   where UserName=N'{0}' ", name, displayName, role, address, phone, gender);
             int result = DataProvider.Instance.ExexuteNonQuery(query);
             return result>0;
             

@@ -45,11 +45,13 @@ namespace QuanLyQuanMyCayThanhNhan
             LoadFood();
             LoadCategoryIntoCombobox(cbCategory);
 
-            dtgvClient.DataSource=ClientList;
-            dtgvClient.Columns["ID"].Visible= false;
+            dtgvClient.DataSource = ClientList;
             AddClientBinding();
             LoadClient();
-
+            dtgvClient.Columns["Column3"].Visible = false;
+            dtgvClient.Columns["Column13"].Visible = false;
+            dtgvClient.Columns["Column4"].Visible = false;
+            panel6.Size = new System.Drawing.Size(0, 0);
         }
 
         void AddFoodCategoryBinding()
@@ -71,12 +73,12 @@ namespace QuanLyQuanMyCayThanhNhan
             txbFoodName.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "Name", true, DataSourceUpdateMode.Never));
             //    cbCategory.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "CategoryId", true, DataSourceUpdateMode.Never));
             nmFoodPrice.DataBindings.Add(new Binding("Value", dtgvFood.DataSource, "price", true, DataSourceUpdateMode.Never));
-           
+           nmQuantity.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "Quantity1", true, DataSourceUpdateMode.Never));
         }
 
         void LoadCategoryIntoCombobox(ComboBox comboBox)
         {
-            cbCategory.DataSource=CategoryDAO.Instance.GetListCategory();// GetCategoryByFoodName("Đồ ăn vặt");//GetListCategory
+            cbCategory.DataSource=CategoryDAO.Instance.GetListCategory();
             comboBox.DisplayMember="Name";
             
         }
@@ -90,12 +92,12 @@ namespace QuanLyQuanMyCayThanhNhan
 
         void AddClientBinding()
         {
-            txbClientID.DataBindings.Add(new Binding("Text", dtgvClient.DataSource, "ID", true, DataSourceUpdateMode.Never));
-            txbClientName.DataBindings.Add(new Binding("Text", dtgvClient.DataSource, "Name", true, DataSourceUpdateMode.Never));
+            txbClientID.DataBindings.Add(new Binding("Text", dtgvClient.DataSource, "UserName", true, DataSourceUpdateMode.Never));
+            txbClientName.DataBindings.Add(new Binding("Text", dtgvClient.DataSource, "DisplayName", true, DataSourceUpdateMode.Never));
             txbClientAddress.DataBindings.Add(new Binding("Text", dtgvClient.DataSource, "Address", true, DataSourceUpdateMode.Never));
             txbClientPhone.DataBindings.Add(new Binding("Text", dtgvClient.DataSource, "phone", true, DataSourceUpdateMode.Never));
-           
-            //  txbClientPhone.DataBindings.Add(new Binding("Text", dtgvClient.DataSource, "phone", true, DataSourceUpdateMode.Never));
+            cbGender.DataBindings.Add(new Binding("Text", dtgvClient.DataSource, "gender", true, DataSourceUpdateMode.Never));
+            
         }
 
 
@@ -168,8 +170,8 @@ namespace QuanLyQuanMyCayThanhNhan
             string name = txbFoodName.Text;
             int idCategory = (cbCategory.SelectedItem as Category).ID;
             float price = (float)nmFoodPrice.Value;
-   
-            if (FoodDAO.Instance.InsertFood(name, idCategory, price))
+            int quantity = (int)nmQuantity.Value;
+            if (FoodDAO.Instance.InsertFood(name, idCategory, price, quantity ))
             {
                 MessageBox.Show("Thêm thành công");
 
@@ -187,7 +189,8 @@ namespace QuanLyQuanMyCayThanhNhan
             string name = txbFoodName.Text;
             int idCategory = (cbCategory.SelectedItem as Category).ID;
             float price = (float)nmFoodPrice.Value;
-            if (FoodDAO.Instance.UpdateFood(id, name, idCategory, price))
+            int quantity = (int)nmQuantity.Value;
+            if (FoodDAO.Instance.UpdateFood(id, name, idCategory, price, quantity))
             {
                 MessageBox.Show("Sửa thành công");
                 
@@ -228,10 +231,10 @@ namespace QuanLyQuanMyCayThanhNhan
             string name = txbClientName.Text;
             string address = txbClientAddress.Text;
             string phone = txbClientPhone.Text;
-
+            string gender= cbGender.Text;   
             if (funtion.Instance.checkName(txbClientName.Text))
                 if (funtion.Instance.checkPhone(txbClientPhone.Text))
-                    if (ClientDAO.Instance.InsertClient(name, address, phone))
+                    if (ClientDAO.Instance.InsertClient(name, address, phone,gender))
                     {
                         MessageBox.Show("Thêm thành công");
                         LoadClient();
@@ -249,13 +252,14 @@ namespace QuanLyQuanMyCayThanhNhan
 
         private void btnEditClient_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txbClientID.Text);
+            string id = txbClientID.Text;
             string name = txbClientName.Text;
             string address = txbClientAddress.Text;
             string phone = txbClientPhone.Text;
-            if(funtion.Instance.checkName(txbClientName.Text))
+            string gender = cbGender.Text;
+            if (funtion.Instance.checkName(txbClientName.Text))
                 if (funtion.Instance.checkPhone(txbClientPhone.Text))
-                    if (ClientDAO.Instance.UpdateClient(id, name, address, phone))
+                    if (ClientDAO.Instance.UpdateClient(id, name, address, phone,gender))
                     {
                         MessageBox.Show("Sửa thành công");
                         LoadClient();
@@ -274,7 +278,7 @@ namespace QuanLyQuanMyCayThanhNhan
 
         private void btnDeleteClient_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txbClientID.Text);
+            string id = txbClientID.Text;
             if (ClientDAO.Instance.DeleteClent(id))
             {
                 MessageBox.Show("Xóa thành công");
@@ -298,8 +302,17 @@ namespace QuanLyQuanMyCayThanhNhan
             cbCategory.DisplayMember="Name";
         }
 
+        private void cbGender_Click(object sender, EventArgs e)
+        {
+            List<string> list = new List<string>();
+            list.Add("Nam"); list.Add("Nữ");
+            cbGender.DataSource = list;
+        }
+
         #endregion Event
 
-
+       
+        
+        
     }
 }
