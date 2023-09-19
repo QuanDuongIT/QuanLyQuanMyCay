@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\AColor.cs" />
     <Compile Include="DAO\BillDAO.cs" />
     <Compile Include="DAO\BillIfoDAO.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
